@@ -21,18 +21,13 @@ function initializeCode() {
 }
 
 async function fetchDog(wikiImg, wikiHeader, wikiText) {
-  await fetch("https://dog.ceo/api/breeds/image/random")
+  await fetch("https://dog.ceo/api/breed/borzoi/images/random")
     .then((response) => response.json())
     .then((jsonMy) => {
       wikiImg.src = jsonMy.message;
-      let urlString = jsonMy.message;
-      let arr = urlString.split("/");
-      let searchName = arr[4].split("-");
-      let newContent = document.createTextNode(searchName[0].toUpperCase());
+      let newContent = document.createTextNode("Borzoi");
       fetch(
-        "https://en.wikipedia.org/api/rest_v1/page/summary/" +
-          searchName[0] +
-          "?redirect=false"
+        "https://en.wikipedia.org/api/rest_v1/page/summary/borzoi"
       )
         .then((resp) => resp.json())
         .then((jsonText) => {
