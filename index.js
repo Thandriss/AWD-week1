@@ -9,16 +9,14 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  var meta = document.createElement("meta");
+  const meta = document.createElement("meta");
   meta.name = "viewport";
   meta.content = "width=device-width, initial-scale=1";
   document.getElementsByTagName("head")[0].appendChild(meta);
-  const container = document.getElementsByClassName("container");
-  container.style.maxWidth = "960px";
-  container.style.margin = "0 auto";
+  const cont = document.getElementById("container");
   for (let i = 0; i < 5; i++) {
     let newCard = generateDivWithImg();
-    container.appendChild(newCard);
+    cont.appendChild(newCard);
   }
 }
 
