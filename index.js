@@ -46,22 +46,16 @@ async function fetchDog(wikiImg, wikiHeader, wikiText) {
 function generateDivWithImg() {
   let wikiImg = document.createElement("img");
   wikiImg.className = "wiki-img";
-  wikiImg.style.width = "100%";
-  wikiImg.style.padding = "5px";
   let newDiv = document.createElement("div");
   newDiv.className = "wiki-item";
-  newDiv.style.margin = "10px";
-  newDiv.style.boxShadow = "-5px -5px 5px gray";
   let wikiHeader = document.createElement("h1");
   wikiHeader.className = "wiki-header";
   let wikiContent = document.createElement("div");
   wikiContent.className = "wiki-content";
   let wikiText = document.createElement("p");
-  wikiText.style.marginLeft = "10px";
   wikiText.className = "wiki-text";
   let imgContainer = document.createElement("div");
   imgContainer.className = "img-container";
-  wikiContent.style.padding = "10px ";
   fetchDog(wikiImg, wikiHeader, wikiText);
   wikiContent.appendChild(wikiText);
   imgContainer.appendChild(wikiImg);

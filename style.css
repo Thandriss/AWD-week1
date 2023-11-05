@@ -2,6 +2,21 @@
     max-width: 960px;
     margin: 0 auto;
   }
+  .wiki-item {
+    box-shadow: -5px -5px 5px gray;
+    margin: 10px;
+}
+.wiki-img{
+    width: 100%;
+    padding: 5px;
+}
+.wiki-text{
+    margin-left: 10px;
+}
+.wiki-content{
+    padding: 10px;
+}
+
 @media screen and (min-width: 600px) {
     .wiki-content {
         display: flex;
